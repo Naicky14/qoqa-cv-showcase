@@ -52,6 +52,13 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				qoqa: {
+					pink: 'hsl(var(--qoqa-pink))',
+					green: 'hsl(var(--qoqa-green))',
+					blue: 'hsl(var(--qoqa-blue))',
+					yellow: 'hsl(var(--qoqa-yellow))',
+					orange: 'hsl(var(--qoqa-orange))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
