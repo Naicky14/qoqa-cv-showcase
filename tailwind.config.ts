@@ -57,7 +57,9 @@ export default {
 					green: 'hsl(var(--qoqa-green))',
 					blue: 'hsl(var(--qoqa-blue))',
 					yellow: 'hsl(var(--qoqa-yellow))',
-					orange: 'hsl(var(--qoqa-orange))'
+					orange: 'hsl(var(--qoqa-orange))',
+					'dark-bg': 'hsl(var(--qoqa-dark-bg))',
+					'progress-bg': 'hsl(var(--qoqa-progress-bg))'
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',

@@ -8,23 +8,23 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 0%;
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 0%;
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 0%;
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 0 0% 0%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 0%;
 
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 0%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
 
     --accent: 320 100% 85%;
     --accent-foreground: 0 0% 0%;
@@ -32,18 +32,20 @@ All colors MUST be HSL.
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: 0 0% 0%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 0 0% 100%;
 
     --radius: 1rem;
 
     /* QoQa brand colors */
-    --qoqa-pink: 320 100% 85%;
-    --qoqa-green: 150 80% 70%;
-    --qoqa-blue: 200 90% 70%;
-    --qoqa-yellow: 50 100% 70%;
-    --qoqa-orange: 25 100% 65%;
+    --qoqa-pink: 320 100% 65%;
+    --qoqa-green: 150 80% 50%;
+    --qoqa-blue: 200 90% 60%;
+    --qoqa-yellow: 50 100% 60%;
+    --qoqa-orange: 25 100% 55%;
+    --qoqa-dark-bg: 0 0% 7%;
+    --qoqa-progress-bg: 0 0% 25%;
 
     --sidebar-background: 0 0% 98%;
 
@@ -92,11 +94,13 @@ All colors MUST be HSL.
     --ring: 0 0% 100%;
 
     /* QoQa brand colors remain the same */
-    --qoqa-pink: 320 100% 85%;
-    --qoqa-green: 150 80% 70%;
-    --qoqa-blue: 200 90% 70%;
-    --qoqa-yellow: 50 100% 70%;
-    --qoqa-orange: 25 100% 65%;
+    --qoqa-pink: 320 100% 65%;
+    --qoqa-green: 150 80% 50%;
+    --qoqa-blue: 200 90% 60%;
+    --qoqa-yellow: 50 100% 60%;
+    --qoqa-orange: 25 100% 55%;
+    --qoqa-dark-bg: 0 0% 7%;
+    --qoqa-progress-bg: 0 0% 25%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;

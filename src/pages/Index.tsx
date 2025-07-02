@@ -22,7 +22,7 @@ const Index = () => {
       discount: "Jusqu'à -99%",
       stockPercent: 100,
       timeLeft: "3 mois",
-      bgColor: "bg-gradient-to-br from-qoqa-pink to-qoqa-orange",
+      bgColor: "bg-qoqa-pink",
       emoji: "📸"
     },
     {
@@ -32,7 +32,7 @@ const Index = () => {
       price: "Sur devis",
       stockPercent: 85,
       timeLeft: "2 jours",
-      bgColor: "bg-gradient-to-br from-qoqa-blue to-qoqa-green",
+      bgColor: "bg-qoqa-blue",
       emoji: "🎨"
     },
     {
@@ -42,7 +42,7 @@ const Index = () => {
       price: "À partir de 200.–",
       stockPercent: 60,
       timeLeft: "5 jours",
-      bgColor: "bg-gradient-to-br from-qoqa-yellow to-qoqa-orange",
+      bgColor: "bg-qoqa-yellow",
       emoji: "📷"
     },
     {
@@ -52,59 +52,60 @@ const Index = () => {
       price: "À partir de 50.–",
       stockPercent: 40,
       timeLeft: "1 jour",
-      bgColor: "bg-gradient-to-br from-qoqa-green to-qoqa-blue",
+      bgColor: "bg-qoqa-green",
       emoji: "🖼️"
     }
   ];
 
   return (
-    <div className="min-h-screen bg-background">
-      {/* Header promotionnel style QoQa */}
-      <div className="bg-gradient-to-r from-qoqa-pink via-qoqa-orange to-qoqa-yellow p-4">
-        <div className="max-w-6xl mx-auto">
-          <h1 className="text-2xl font-bold text-center text-black mb-2">
-            🎉 Portfolio QoQa Style - CV Créatif
-          </h1>
-          <p className="text-center text-black/80">
-            Découvrez mes services créatifs avec des offres exceptionnelles
-          </p>
+    <div className="min-h-screen bg-background text-foreground">
+      {/* Header QoQa style - removed since we're going for pure mobile dark style */}
+      
+      {/* Logo */}
+      <div className="text-center py-6">
+        <h1 className="text-3xl font-bold text-white">qoqa</h1>
+      </div>
+
+      {/* Hero Cards - QoQa promotional style */}
+      <div className="px-4 mb-6">
+        <div className="grid grid-cols-1 gap-4">
+          <div className="bg-qoqa-pink rounded-2xl p-6 text-center">
+            <div className="text-4xl mb-2">📸</div>
+            <h2 className="text-black font-bold text-xl mb-1">Portfolio QoQa Style</h2>
+            <p className="text-black/80 mb-3">CV créatif et moderne</p>
+            <button className="bg-black text-white px-6 py-2 rounded-full font-semibold">
+              Découvrir...
+            </button>
+          </div>
         </div>
       </div>
 
       {/* Navigation des catégories */}
-      <div className="bg-white border-b">
-        <div className="max-w-6xl mx-auto p-4">
-          <h2 className="text-xl font-bold mb-4">Notre sélection du jour</h2>
-          <div className="flex gap-2 overflow-x-auto pb-2">
-            {categories.map((category) => (
-              <Badge
-                key={category.name}
-                variant={category.active ? "default" : "secondary"}
-                className={`whitespace-nowrap px-3 py-2 ${
-                  category.active 
-                    ? "bg-primary text-primary-foreground" 
-                    : "bg-muted hover:bg-muted/80"
-                }`}
-              >
-                {category.emoji} {category.name}
-              </Badge>
-            ))}
-          </div>
+      <div className="px-4 mb-6">
+        <h2 className="text-xl font-bold mb-4 text-white">Notre sélection du jour</h2>
+        <div className="flex gap-2 overflow-x-auto pb-2">
+          {categories.map((category) => (
+            <Badge
+              key={category.name}
+              variant={category.active ? "default" : "secondary"}
+              className={`whitespace-nowrap px-3 py-2 ${
+                category.active 
+                  ? "bg-white text-black" 
+                  : "bg-qoqa-dark-bg text-white border-white/20"
+              }`}
+            >
+              {category.emoji} {category.name}
+            </Badge>
+          ))}
         </div>
       </div>
 
       {/* Section Découverte */}
-      <div className="max-w-6xl mx-auto p-4">
-        <div className="mb-8">
-          <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-            🔍 Découverte
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {products.map((product) => (
-              <ProductCard key={product.id} {...product} />
-            ))}
-          </div>
+      <div className="px-4 pb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {products.map((product) => (
+            <ProductCard key={product.id} {...product} />
+          ))}
         </div>
       </div>
     </div>
