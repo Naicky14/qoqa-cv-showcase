@@ -66,19 +66,6 @@ const Index = () => {
         <h1 className="text-3xl font-bold text-white">qoqa</h1>
       </div>
 
-      {/* Hero Cards - QoQa promotional style */}
-      <div className="px-4 mb-6">
-        <div className="grid grid-cols-1 gap-4">
-          <div className="bg-qoqa-pink rounded-2xl p-6 text-center">
-            <div className="text-4xl mb-2">📸</div>
-            <h2 className="text-black font-bold text-xl mb-1">Portfolio QoQa Style</h2>
-            <p className="text-black/80 mb-3">CV créatif et moderne</p>
-            <button className="bg-black text-white px-6 py-2 rounded-full font-semibold">
-              Découvrir...
-            </button>
-          </div>
-        </div>
-      </div>
 
       {/* Navigation des catégories */}
       <div className="px-4 mb-6">
