@@ -69,7 +69,7 @@ const Index = () => {
 
       {/* Navigation des catégories */}
       <div className="px-4 mb-6">
-        <h2 className="text-xl font-bold mb-4 text-white">Notre sélection du jour</h2>
+        <h2 className="text-xl font-bold mb-4 text-white text-center">Notre sélection du jour</h2>
         <div className="flex gap-2 overflow-x-auto pb-2">
           {categories.map((category) => (
             <Badge
