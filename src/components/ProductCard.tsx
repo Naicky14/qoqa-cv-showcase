@@ -11,6 +11,7 @@ interface ProductCardProps {
   originalPrice?: string;
   discount?: string;
   stockPercent: number;
+  stockText?: string;
   timeLeft: string;
   bgColor: string;
   emoji: string;
@@ -24,6 +25,7 @@ const ProductCard = ({
   originalPrice, 
   discount, 
   stockPercent, 
+  stockText,
   timeLeft, 
   bgColor,
   emoji 
@@ -55,8 +57,8 @@ const ProductCard = ({
             
             <div className="space-y-2">
               <div className="flex justify-between items-center text-xs">
-                <span className="font-semibold text-white">{stockPercent}%</span>
-                <span className="text-white/60">du stock restant</span>
+                <span className="font-semibold text-white">{stockText || `${stockPercent}%`}</span>
+                <span className="text-white/60">{stockText ? "" : "du stock restant"}</span>
               </div>
               
               <div className="w-full bg-qoqa-progress-bg rounded-full h-1">
