@@ -63,8 +63,8 @@ const ProductCard = ({
               
               <div className="w-full bg-qoqa-progress-bg rounded-full h-1">
                 <div 
-                  className={`h-1 rounded-full ${stockPercent > 50 ? 'bg-qoqa-green' : stockPercent > 20 ? 'bg-qoqa-orange' : 'bg-qoqa-pink'}`}
-                  style={{ width: `${stockPercent}%` }}
+                  className={`h-1 rounded-full ${stockText ? 'bg-qoqa-pink' : stockPercent > 50 ? 'bg-qoqa-green' : stockPercent > 20 ? 'bg-qoqa-orange' : 'bg-qoqa-pink'}`}
+                  style={{ width: `${stockText ? '100' : stockPercent}%` }}
                 />
               </div>
               

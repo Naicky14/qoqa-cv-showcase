@@ -21,7 +21,7 @@ const Index = () => {
     price: "Négociable",
     discount: "Jusqu'à -99%",
     stockPercent: 0,
-    stockText: "Une pièce exclusive",
+    stockText: "Une pièce disponible",
     timeLeft: "3 mois",
     bgColor: "bg-qoqa-pink",
     emoji: "📸"
