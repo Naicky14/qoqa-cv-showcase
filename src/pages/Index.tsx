@@ -1,4 +1,5 @@
 import ProductCard from "@/components/ProductCard";
+import CountdownTimer from "@/components/CountdownTimer";
 import { Badge } from "@/components/ui/badge";
 
 const Index = () => {
@@ -13,50 +14,18 @@ const Index = () => {
     { name: "Vin", emoji: "🍷", active: false },
   ];
 
-  const products = [
-    {
-      id: "qreator",
-      title: "Qreator",
-      subtitle: "XS Ultra Max Pro Super Deluxe Edition™️",
-      price: "Négociable",
-      discount: "Jusqu'à -99%",
-      stockPercent: 0,
-      stockText: "Une pièce exclusive",
-      timeLeft: "3 mois",
-      bgColor: "bg-qoqa-pink",
-      emoji: "📸"
-    },
-    {
-      id: "designer-pro",
-      title: "Designer Pro",
-      subtitle: "Solutions créatives sur mesure",
-      price: "Sur devis",
-      stockPercent: 85,
-      timeLeft: "2 jours",
-      bgColor: "bg-qoqa-blue",
-      emoji: "🎨"
-    },
-    {
-      id: "photo-master",
-      title: "Photo Master",
-      subtitle: "Séances photo professionnelles",
-      price: "À partir de 200.–",
-      stockPercent: 60,
-      timeLeft: "5 jours",
-      bgColor: "bg-qoqa-yellow",
-      emoji: "📷"
-    },
-    {
-      id: "retouche-expert",
-      title: "Retouche Expert",
-      subtitle: "Retouche photo et vidéo premium",
-      price: "À partir de 50.–",
-      stockPercent: 40,
-      timeLeft: "1 jour",
-      bgColor: "bg-qoqa-green",
-      emoji: "🖼️"
-    }
-  ];
+  const qreatorProduct = {
+    id: "qreator",
+    title: "Qreator",
+    subtitle: "XS Ultra Max Pro Super Deluxe Edition™️",
+    price: "Négociable",
+    discount: "Jusqu'à -99%",
+    stockPercent: 0,
+    stockText: "Une pièce exclusive",
+    timeLeft: "3 mois",
+    bgColor: "bg-qoqa-pink",
+    emoji: "📸"
+  };
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -90,10 +59,14 @@ const Index = () => {
 
       {/* Section Découverte */}
       <div className="px-4 pb-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {products.map((product) => (
-            <ProductCard key={product.id} {...product} />
-          ))}
+        <div className="flex justify-center">
+          <div className="w-full max-w-sm">
+            <ProductCard {...qreatorProduct} />
+            <div className="mt-4 text-center">
+              <div className="text-white text-sm mb-1">Temps restant:</div>
+              <CountdownTimer className="text-white text-xl font-bold" />
+            </div>
+          </div>
         </div>
       </div>
     </div>
