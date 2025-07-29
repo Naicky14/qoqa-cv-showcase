@@ -20,7 +20,7 @@ const Index = () => {
     subtitle: "XS Ultra Max Pro Super Deluxe Edition™️",
     price: "Négociable",
     discount: "Jusqu'à -99%",
-    stockPercent: 0,
+    stockPercent: 100,
     stockText: "Une pièce disponible",
     timeLeft: "3 mois",
     bgColor: "bg-qoqa-pink",
