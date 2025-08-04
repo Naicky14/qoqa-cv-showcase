@@ -1,19 +1,40 @@
 import ProductCard from "@/components/ProductCard";
 import CountdownTimer from "@/components/CountdownTimer";
 import { Badge } from "@/components/ui/badge";
-
 const Index = () => {
-  const categories = [
-    { name: "Découverte", emoji: "🔍", active: true },
-    { name: "Brico", emoji: "🔨", active: false },
-    { name: "Expérience", emoji: "✨", active: false },
-    { name: "Sport", emoji: "⚽", active: false },
-    { name: "Cuisine", emoji: "🍳", active: false },
-    { name: "Maison", emoji: "🏠", active: false },
-    { name: "Famille", emoji: "👨‍👩‍👧‍👦", active: false },
-    { name: "Vin", emoji: "🍷", active: false },
-  ];
-
+  const categories = [{
+    name: "Découverte",
+    emoji: "🔍",
+    active: true
+  }, {
+    name: "Brico",
+    emoji: "🔨",
+    active: false
+  }, {
+    name: "Expérience",
+    emoji: "✨",
+    active: false
+  }, {
+    name: "Sport",
+    emoji: "⚽",
+    active: false
+  }, {
+    name: "Cuisine",
+    emoji: "🍳",
+    active: false
+  }, {
+    name: "Maison",
+    emoji: "🏠",
+    active: false
+  }, {
+    name: "Famille",
+    emoji: "👨‍👩‍👧‍👦",
+    active: false
+  }, {
+    name: "Vin",
+    emoji: "🍷",
+    active: false
+  }];
   const qreatorProduct = {
     id: "qreator",
     title: "Qreator",
@@ -26,9 +47,7 @@ const Index = () => {
     bgColor: "bg-qoqa-pink",
     emoji: "📸"
   };
-
-  return (
-    <div className="min-h-screen bg-background text-foreground">
+  return <div className="min-h-screen bg-background text-foreground">
       {/* Header QoQa style - removed since we're going for pure mobile dark style */}
       
       {/* Logo */}
@@ -41,19 +60,9 @@ const Index = () => {
       <div className="px-4 mb-6">
         <h2 className="text-xl font-bold mb-4 text-white text-center">Notre sélection du jour</h2>
         <div className="flex gap-2 overflow-x-auto pb-2">
-          {categories.map((category) => (
-            <Badge
-              key={category.name}
-              variant={category.active ? "default" : "secondary"}
-              className={`whitespace-nowrap px-3 py-2 ${
-                category.active 
-                  ? "bg-white text-black" 
-                  : "bg-qoqa-dark-bg text-white border-white/20"
-              }`}
-            >
+          {categories.map(category => <Badge key={category.name} variant={category.active ? "default" : "secondary"} className={`whitespace-nowrap px-3 py-2 ${category.active ? "bg-white text-black" : "bg-qoqa-dark-bg text-white border-white/20"}`}>
               {category.emoji} {category.name}
-            </Badge>
-          ))}
+            </Badge>)}
         </div>
       </div>
 
@@ -62,15 +71,10 @@ const Index = () => {
         <div className="flex justify-center">
           <div className="w-full max-w-sm">
             <ProductCard {...qreatorProduct} />
-            <div className="mt-4 text-center">
-              <div className="text-white text-sm mb-1">Temps restant:</div>
-              <CountdownTimer className="text-white text-xl font-bold" />
-            </div>
+            
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
