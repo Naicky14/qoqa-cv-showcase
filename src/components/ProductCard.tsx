@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Clock } from "lucide-react";
 import { Link } from "react-router-dom";
+import CountdownTimer from "./CountdownTimer";
 
 interface ProductCardProps {
   id: string;
@@ -65,7 +65,7 @@ const ProductCard = ({
               
               <div className="flex justify-between items-center">
                 <span className="text-white font-medium text-sm">{stockText || `${stockPercent}% du stock restant`}</span>
-                <span className="text-white font-mono text-lg font-bold">{timeLeft}</span>
+                <CountdownTimer className="text-white font-mono text-lg font-bold" />
               </div>
             </div>
           </div>
