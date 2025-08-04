@@ -1,9 +1,10 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Clock, Package, Diamond, Gift, MessageCircle, Heart } from "lucide-react";
+import { Clock, Package, Diamond, Gift, MessageCircle, Heart, ArrowLeft, Share } from "lucide-react";
 import ProgressBar from "@/components/ProgressBar";
 import QoqaButton from "@/components/QoqaButton";
+import CountdownTimer from "@/components/CountdownTimer";
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -23,13 +24,41 @@ const ProductDetail = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* Progress Bar QoQa Style */}
-      <ProgressBar stockPercent={17} timeLeft="01:15:20" />
+      {/* Header Navigation */}
+      <div className="relative bg-black">
+        <div className="flex items-center justify-between p-4 relative z-10">
+          <button 
+            onClick={() => navigate("/")}
+            className="w-10 h-10 rounded-full bg-black/50 flex items-center justify-center backdrop-blur-sm"
+          >
+            <ArrowLeft className="w-6 h-6 text-white" />
+          </button>
+          
+          <h1 className="text-white text-lg font-bold">qoqa</h1>
+          
+          <button className="w-10 h-10 rounded-full bg-black/50 flex items-center justify-center backdrop-blur-sm">
+            <Share className="w-6 h-6 text-white" />
+          </button>
+        </div>
 
-      {/* Product Image */}
-      <div className="bg-qoqa-pink p-8">
-        <div className="text-center">
-          <div className="text-8xl mb-4">📸</div>
+        {/* Product Image */}
+        <div className="bg-qoqa-pink aspect-square flex items-center justify-center">
+          <div className="text-8xl">📸</div>
+        </div>
+
+        {/* Progress Bar Overlay */}
+        <div className="absolute bottom-0 left-0 right-0 bg-black/80 backdrop-blur-sm p-4">
+          <div className="flex items-center justify-between mb-2">
+            <span className="text-white text-sm font-medium">Une pièce disponible</span>
+            <CountdownTimer className="text-white font-mono text-sm" />
+          </div>
+          
+          <div className="w-full bg-white/20 rounded-full h-2">
+            <div 
+              className="h-2 rounded-full bg-gradient-to-r from-qoqa-pink to-pink-400"
+              style={{ width: "100%" }}
+            />
+          </div>
         </div>
       </div>
 
@@ -45,7 +74,7 @@ const ProductDetail = () => {
           Qreator XS Ultra Max Pro Super Deluxe Edition™️
         </h1>
         <div className="text-4xl font-bold text-white mb-4">
-          Négociable
+          Prix sur demande
         </div>
         
         <div className="flex gap-2 mb-4">
