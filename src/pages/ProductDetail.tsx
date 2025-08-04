@@ -149,7 +149,7 @@ const ProductDetail = () => {
             <div className="w-16 h-16 mx-auto mb-3 flex items-center justify-center">
               <span className="text-4xl">🙌</span>
             </div>
-            <h3 className="text-white font-semibold mb-2">Production artisanale italienne</h3>
+            <h3 className="text-white font-semibold mb-2">Production artisanale suisse</h3>
             <p className="text-white/70 text-sm">Dans la province de Vérone</p>
           </div>
           
