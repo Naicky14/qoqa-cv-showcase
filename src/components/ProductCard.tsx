@@ -32,45 +32,40 @@ const ProductCard = ({
 }: ProductCardProps) => {
   return (
     <Link to={`/product/${id}`}>
-      <Card className="overflow-hidden hover:scale-105 transition-transform bg-qoqa-dark-bg border-white/10">
-        <div className={`h-32 relative ${bgColor} flex items-center justify-center`}>
-          <div className="text-4xl">{emoji}</div>
+      <Card className="overflow-hidden hover:scale-105 transition-transform bg-black border-white/20 rounded-2xl">
+        <div className={`h-48 relative ${bgColor} flex items-center justify-center`}>
+          <div className="text-6xl">{emoji}</div>
         </div>
         
-        <CardContent className="p-3">
-          <div className="space-y-2">
-            <h3 className="font-bold text-white text-sm">{title}</h3>
-            <p className="text-xs text-white/70 line-clamp-2">{subtitle}</p>
+        <CardContent className="p-6">
+          <div className="space-y-4">
+            <h3 className="font-bold text-white text-xl">{title}</h3>
+            <p className="text-sm text-white/80 leading-relaxed">{subtitle}</p>
             
             {discount && (
-              <Badge variant="destructive" className="bg-qoqa-pink text-black font-bold text-xs">
+              <Badge variant="destructive" className="bg-qoqa-pink text-black font-bold text-sm px-3 py-1">
                 {discount}
               </Badge>
             )}
             
-            <div className="flex items-baseline gap-2">
-              <span className="text-lg font-bold text-white">{price}</span>
+            <div className="flex items-baseline gap-3">
+              <span className="text-3xl font-bold text-white">{price}</span>
               {originalPrice && (
-                <span className="text-xs text-white/50 line-through">{originalPrice}</span>
+                <span className="text-sm text-white/50 line-through">{originalPrice}</span>
               )}
             </div>
             
-            <div className="space-y-2">
-              <div className="flex justify-between items-center text-xs">
-                <span className="font-semibold text-white">{stockText || `${stockPercent}%`}</span>
-                <span className="text-white/60">{stockText ? "" : "du stock restant"}</span>
-              </div>
-              
-              <div className="w-full bg-qoqa-progress-bg rounded-full h-1">
+            <div className="space-y-3 mt-6">
+              <div className="w-full bg-gray-600 rounded-full h-3">
                 <div 
-                  className={`h-1 rounded-full ${stockText ? 'bg-qoqa-pink' : stockPercent > 50 ? 'bg-qoqa-green' : stockPercent > 20 ? 'bg-qoqa-orange' : 'bg-qoqa-pink'}`}
+                  className="h-3 rounded-full bg-gradient-to-r from-qoqa-pink to-pink-400"
                   style={{ width: `${stockText ? '100' : stockPercent}%` }}
                 />
               </div>
               
-              <div className="flex items-center gap-1 text-xs text-white/60">
-                <Clock className="w-3 h-3" />
-                <span>{timeLeft}</span>
+              <div className="flex justify-between items-center">
+                <span className="text-white font-medium text-sm">{stockText || `${stockPercent}% du stock restant`}</span>
+                <span className="text-white font-mono text-lg font-bold">{timeLeft}</span>
               </div>
             </div>
           </div>
