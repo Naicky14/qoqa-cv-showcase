@@ -39,7 +39,7 @@ const Index = () => {
     id: "qreator",
     title: "Qreator",
     subtitle: "XS Ultra Max Pro Super Deluxe Edition™️",
-    price: "Négociable",
+    price: "Prix sur demande",
     discount: "Jusqu'à -99%",
     stockPercent: 100,
     stockText: "Une pièce disponible",
