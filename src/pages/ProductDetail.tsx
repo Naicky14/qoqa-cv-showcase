@@ -76,7 +76,7 @@ const ProductDetail = () => {
         <h1 className="text-3xl font-bold text-white mb-2">
           Qreator XS Ultra Max Pro Super Deluxe Edition™️
         </h1>
-        <div className="text-4xl font-bold text-white mb-4">
+        <div className="text-3xl font-bold text-white mb-4">
           Prix sur demande
         </div>
         
