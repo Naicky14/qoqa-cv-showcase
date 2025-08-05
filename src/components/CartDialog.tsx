@@ -84,7 +84,7 @@ const CartDialog = ({
               
               {/* Info produit */}
               <div className="flex-1">
-                <h3 className="text-white font-semibold mb-1">Production artisanale suisse</h3>
+                
                 <p className="text-white text-sm mb-2">Qreator XS Ultra Max Pro Super Deluxe Edition™️</p>
                 <p className="text-white/80 text-xs">1× Qreator XS Ultra Max Pro Super Deluxe Edition™️</p>
                 <p className="text-white font-bold text-lg mt-2">Prix sur demande</p>
