@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Dialog, DialogContent, DialogHeader } from "@/components/ui/dialog";
 import { ArrowLeft, Minus, Plus, Trash2 } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 interface CartDialogProps {
   open: boolean;
@@ -10,6 +11,7 @@ interface CartDialogProps {
 const CartDialog = ({ open, onOpenChange }: CartDialogProps) => {
   const [timeLeft, setTimeLeft] = useState(10 * 60); // 10 minutes en secondes
   const [quantity, setQuantity] = useState(1);
+  const { toast } = useToast();
 
   useEffect(() => {
     if (!open) return;
@@ -34,6 +36,14 @@ const CartDialog = ({ open, onOpenChange }: CartDialogProps) => {
   };
 
   const handleQuantityChange = (delta: number) => {
+    if (delta > 0) {
+      toast({
+        title: "Oups ! Une erreur.",
+        description: "Ce produit est une édition ultra-limitée (1/1).",
+        variant: "destructive",
+      });
+      return;
+    }
     setQuantity(Math.max(1, quantity + delta));
   };
 
