@@ -67,11 +67,49 @@ const Index = () => {
       </div>
 
       {/* Section Découverte */}
-      <div className="px-4 pb-20">
+      <div className="px-4 pb-24">
         <div className="flex justify-center">
           <div className="w-full max-w-sm">
             <ProductCard {...qreatorProduct} />
             
+          </div>
+        </div>
+      </div>
+
+      {/* Navigation en bas */}
+      <div className="fixed bottom-0 left-0 right-0 bg-black border-t border-white/10">
+        <div className="flex justify-around items-center py-2">
+          <div className="flex flex-col items-center py-2">
+            <div className="w-6 h-6 mb-1 flex items-center justify-center">
+              <div className="w-4 h-4 bg-white rounded-full"></div>
+            </div>
+            <span className="text-xs text-white font-medium">Offres</span>
+          </div>
+          <div className="flex flex-col items-center py-2">
+            <div className="w-6 h-6 mb-1 flex items-center justify-center">
+              <div className="w-4 h-3 border-2 border-white/60"></div>
+            </div>
+            <span className="text-xs text-white/60">Qblog</span>
+          </div>
+          <div className="flex flex-col items-center py-2">
+            <div className="w-6 h-6 mb-1 flex items-center justify-center">
+              <div className="w-4 h-4 rounded-full border-2 border-white/60 relative">
+                <div className="absolute -top-1 -right-1 w-3 h-3 bg-qoqa-pink rounded-full flex items-center justify-center">
+                  <span className="text-xs text-white font-bold">3</span>
+                </div>
+              </div>
+            </div>
+            <span className="text-xs text-white/60">Compte</span>
+          </div>
+          <div className="flex flex-col items-center py-2">
+            <div className="w-6 h-6 mb-1 flex items-center justify-center">
+              <div className="flex flex-col gap-0.5">
+                <div className="w-4 h-0.5 bg-white/60"></div>
+                <div className="w-4 h-0.5 bg-white/60"></div>
+                <div className="w-4 h-0.5 bg-white/60"></div>
+              </div>
+            </div>
+            <span className="text-xs text-white/60">Autres</span>
           </div>
         </div>
       </div>
