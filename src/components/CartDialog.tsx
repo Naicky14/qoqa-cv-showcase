@@ -47,6 +47,14 @@ const CartDialog = ({ open, onOpenChange }: CartDialogProps) => {
     setQuantity(Math.max(1, quantity + delta));
   };
 
+  const handleDeleteProduct = () => {
+    toast({
+      title: "Vraiment ?",
+      description: "Tu supprimes une pièce rare ?",
+      variant: "destructive",
+    });
+  };
+
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-md w-full h-full bg-black text-white border-0 rounded-none p-0 max-w-none overflow-y-auto">
@@ -92,7 +100,10 @@ const CartDialog = ({ open, onOpenChange }: CartDialogProps) => {
               
               {/* Contrôles */}
               <div className="flex flex-col items-end gap-2">
-                <button className="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center">
+                <button 
+                  onClick={handleDeleteProduct}
+                  className="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center"
+                >
                   <Trash2 className="w-4 h-4 text-white" />
                 </button>
                 
