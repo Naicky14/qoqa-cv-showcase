@@ -1,14 +1,17 @@
 import { useParams, useNavigate } from "react-router-dom";
+import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Clock, Package, Diamond, Gift, MessageCircle, Heart, ArrowLeft, Share } from "lucide-react";
 import ProgressBar from "@/components/ProgressBar";
 import QoqaButton from "@/components/QoqaButton";
 import CountdownTimer from "@/components/CountdownTimer";
+import CartDialog from "@/components/CartDialog";
 
 const ProductDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
+  const [cartOpen, setCartOpen] = useState(false);
 
   // For now, we only handle the Qreator product
   if (id !== "qreator") {
@@ -64,7 +67,7 @@ const ProductDetail = () => {
 
       {/* Main Button */}
       <div className="p-4">
-        <QoqaButton>
+        <QoqaButton onClick={() => setCartOpen(true)}>
           Yeah j'en veux un
         </QoqaButton>
       </div>
@@ -237,6 +240,9 @@ const ProductDetail = () => {
 
       {/* Bottom spacing for mobile navigation */}
       <div className="h-20"></div>
+      
+      {/* Cart Dialog */}
+      <CartDialog open={cartOpen} onOpenChange={setCartOpen} />
     </div>
   );
 };
