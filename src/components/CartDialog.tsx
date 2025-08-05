@@ -2,22 +2,23 @@ import { useState, useEffect } from 'react';
 import { Dialog, DialogContent, DialogHeader } from "@/components/ui/dialog";
 import { ArrowLeft, Minus, Plus, Trash2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-
 interface CartDialogProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
 }
-
-const CartDialog = ({ open, onOpenChange }: CartDialogProps) => {
+const CartDialog = ({
+  open,
+  onOpenChange
+}: CartDialogProps) => {
   const [timeLeft, setTimeLeft] = useState(10 * 60); // 10 minutes en secondes
   const [quantity, setQuantity] = useState(1);
-  const { toast } = useToast();
-
+  const {
+    toast
+  } = useToast();
   useEffect(() => {
     if (!open) return;
-    
     const timer = setInterval(() => {
-      setTimeLeft((prev) => {
+      setTimeLeft(prev => {
         if (prev <= 0) {
           clearInterval(timer);
           return 0;
@@ -25,46 +26,37 @@ const CartDialog = ({ open, onOpenChange }: CartDialogProps) => {
         return prev - 1;
       });
     }, 1000);
-
     return () => clearInterval(timer);
   }, [open]);
-
   const formatTime = (seconds: number) => {
     const mins = Math.floor(seconds / 60);
     const secs = seconds % 60;
     return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
   };
-
   const handleQuantityChange = (delta: number) => {
     if (delta > 0) {
       toast({
         title: "Oups ! Une erreur.",
         description: "Ce produit est une édition ultra-limitée (1/1).",
-        variant: "destructive",
+        variant: "destructive"
       });
       return;
     }
     setQuantity(Math.max(1, quantity + delta));
   };
-
   const handleDeleteProduct = () => {
     toast({
       title: "Vraiment ?",
       description: "Tu supprimes une pièce rare ?",
-      variant: "destructive",
+      variant: "destructive"
     });
   };
-
-  return (
-    <Dialog open={open} onOpenChange={onOpenChange}>
+  return <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-md w-full h-full bg-black text-white border-0 rounded-none p-0 max-w-none overflow-y-auto">
         {/* Header avec chrono */}
         <DialogHeader className="p-4 border-b border-white/10">
           <div className="flex items-center justify-between">
-            <button 
-              onClick={() => onOpenChange(false)}
-              className="w-8 h-8 flex items-center justify-center"
-            >
+            <button onClick={() => onOpenChange(false)} className="w-8 h-8 flex items-center justify-center">
               <ArrowLeft className="w-6 h-6 text-white" />
             </button>
             
@@ -100,27 +92,18 @@ const CartDialog = ({ open, onOpenChange }: CartDialogProps) => {
               
               {/* Contrôles */}
               <div className="flex flex-col items-end gap-2">
-                <button 
-                  onClick={handleDeleteProduct}
-                  className="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center"
-                >
+                <button onClick={handleDeleteProduct} className="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center">
                   <Trash2 className="w-4 h-4 text-white" />
                 </button>
                 
                 <div className="flex items-center gap-2">
-                  <button 
-                    onClick={() => handleQuantityChange(-1)}
-                    className="w-8 h-8 bg-white rounded-full flex items-center justify-center"
-                  >
+                  <button onClick={() => handleQuantityChange(-1)} className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
                     <Minus className="w-4 h-4 text-black" />
                   </button>
                   
                   <span className="text-white font-bold min-w-[20px] text-center">{quantity}</span>
                   
-                  <button 
-                    onClick={() => handleQuantityChange(1)}
-                    className="w-8 h-8 bg-white rounded-full flex items-center justify-center"
-                  >
+                  <button onClick={() => handleQuantityChange(1)} className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
                     <Plus className="w-4 h-4 text-black" />
                   </button>
                 </div>
@@ -129,10 +112,7 @@ const CartDialog = ({ open, onOpenChange }: CartDialogProps) => {
           </div>
 
           {/* Bouton Ajouter un article */}
-          <button className="w-full bg-white/10 rounded-full py-4 mb-8 flex items-center justify-center gap-2 text-white">
-            <Plus className="w-5 h-5" />
-            <span className="font-semibold">Ajouter un article</span>
-          </button>
+          
 
           {/* Adresse de livraison */}
           <div className="mb-8">
@@ -149,11 +129,7 @@ const CartDialog = ({ open, onOpenChange }: CartDialogProps) => {
             </button>
             
             <div className="flex items-center gap-2 mt-4">
-              <input 
-                type="checkbox" 
-                id="saturday-delivery" 
-                className="w-4 h-4 rounded border-white/20 bg-transparent"
-              />
+              <input type="checkbox" id="saturday-delivery" className="w-4 h-4 rounded border-white/20 bg-transparent" />
               <label htmlFor="saturday-delivery" className="text-white text-sm">
                 J'autorise la livraison le samedi
               </label>
@@ -167,8 +143,6 @@ const CartDialog = ({ open, onOpenChange }: CartDialogProps) => {
           </div>
         </div>
       </DialogContent>
-    </Dialog>
-  );
+    </Dialog>;
 };
-
 export default CartDialog;
