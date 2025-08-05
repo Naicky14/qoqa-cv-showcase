@@ -94,7 +94,7 @@ const ProductDetail = () => {
         <div className="space-y-2 text-white/80 text-sm mb-6">
           <div className="flex items-center gap-2">
             <span>✓</span>
-            <span>Expédié au plus tard le 13 décembre 2024</span>
+            <span>Déjà monté, pas besoin de notice</span>
           </div>
           <div className="flex items-center gap-2">
             <span>✓</span>
