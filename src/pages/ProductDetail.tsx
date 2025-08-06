@@ -174,9 +174,7 @@ const ProductDetail = () => {
             
             <div>
               <h4 className="font-semibold text-white mb-2">5. Gestion Pro Mastermind Chrono Control™</h4>
-              <p className="text-sm leading-relaxed">
-                Des délais courts ? Un chaos de brief ? Le Qreator reste calme, s'organise, et vous livre tout ça comme si c'était facile.
-              </p>
+              <p className="text-sm leading-relaxed">Le Qreator peut tout photographier : montres, couches-culottes et même bouteilles. Petite note : une partie du liquide risque d'être prélevée… pour des raisons &quot;techniques&quot; bien sûr. Avec lui, vos projets auront toujours une touche de créativité décalée.</p>
             </div>
             
             <div>
