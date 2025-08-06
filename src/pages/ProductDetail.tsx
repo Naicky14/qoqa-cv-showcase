@@ -31,7 +31,7 @@ const ProductDetail = () => {
             <ArrowLeft className="w-6 h-6 text-white" />
           </button>
           
-          <img src="/lovable-uploads/3b28a478-a367-4887-982d-5a7810e41404.png" alt="QOQA" className="h-6" />
+          <img src="/lovable-uploads/3b28a478-a367-4887-982d-5a7810e41404.png" alt="QOQA" className="h-10" />
           
           <button className="w-10 h-10 rounded-full bg-black/50 flex items-center justify-center backdrop-blur-sm">
             <Share className="w-6 h-6 text-white" />
