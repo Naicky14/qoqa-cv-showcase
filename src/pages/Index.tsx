@@ -52,7 +52,7 @@ const Index = () => {
       
       {/* Logo */}
       <div className="text-center py-6">
-        <h1 className="text-3xl font-bold text-white">qoqa</h1>
+        <img src="/lovable-uploads/3b28a478-a367-4887-982d-5a7810e41404.png" alt="QOQA" className="h-8 mx-auto" />
       </div>
 
 
