@@ -91,7 +91,7 @@ const ProductDetail = () => {
           </div>
           <div className="flex items-center gap-2">
             <span>✓</span>
-            <span>Livraison incluse</span>
+            <span>Livraison incluse, à l'étage, devant la bonne porte</span>
           </div>
         </div>
         
