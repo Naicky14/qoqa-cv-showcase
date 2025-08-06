@@ -80,7 +80,7 @@ const ProductDetail = () => {
           </Badge>
           <Badge className="bg-qoqa-dark-bg text-white border-white/20 flex items-center gap-1">
             <Gift className="w-3 h-3" />
-            Livraison avant Noël
+            Activation instantanée
           </Badge>
         </div>
         
