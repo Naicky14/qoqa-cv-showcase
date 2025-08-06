@@ -193,7 +193,7 @@ const ProductDetail = () => {
           <div className="space-y-2 text-white/90 text-sm">
             <p>• <strong>Photographie :</strong> Studio 10 ans, spécialisation montres, objets précieux, et œuvres d'art.</p>
             <p>• <strong>Retouche :</strong> Adobe Suite (15 ans), Capture One, Pixel-Perfect Technology.</p>
-            <p>• <strong>Logiciels Pro Galaxy Bundle™ :</strong> Photoshop, InDesign, Illustrator, After Effects inclus.</p>
+            <p>• <strong>Logiciels Pro Galaxy Bundle™ :</strong> Photoshop, InDesign, Illustrator, Premiere Pro, After Effects inclus.</p>
             <p>• <strong>Mobilité :</strong> Permis de conduire, véhicule, transports publics, télétravail, grande flexibilité. En attente d'une mission sur la Lune avec SpaceX, mais toujours dispo pour vos projets terrestres.</p>
             <p>• <strong>Compatibilité universelle :</strong> Luxe, publicité, digital, photographie culinaire, édition d'art, et reportage événementiel, ou un mix de tout ça.</p>
             <p>• <strong>Extras :</strong> Organisation précise, créativité débordante, et un humour garanti sans supplément.</p>
