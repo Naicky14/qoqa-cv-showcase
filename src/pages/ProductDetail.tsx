@@ -7,33 +7,27 @@ import ProgressBar from "@/components/ProgressBar";
 import QoqaButton from "@/components/QoqaButton";
 import CountdownTimer from "@/components/CountdownTimer";
 import CartDialog from "@/components/CartDialog";
-
 const ProductDetail = () => {
-  const { id } = useParams();
+  const {
+    id
+  } = useParams();
   const navigate = useNavigate();
   const [cartOpen, setCartOpen] = useState(false);
 
   // For now, we only handle the Qreator product
   if (id !== "qreator") {
-    return (
-      <div className="min-h-screen bg-background text-foreground">
+    return <div className="min-h-screen bg-background text-foreground">
         <ProgressBar stockPercent={0} timeLeft="00:00:00" />
         <div className="p-4 text-center">
           <h1 className="text-2xl font-bold">Produit non trouvé</h1>
         </div>
-      </div>
-    );
+      </div>;
   }
-
-  return (
-    <div className="min-h-screen bg-background text-foreground">
+  return <div className="min-h-screen bg-background text-foreground">
       {/* Header Navigation */}
       <div className="relative bg-black">
         <div className="flex items-center justify-between p-4 relative z-10">
-          <button 
-            onClick={() => navigate("/")}
-            className="w-10 h-10 rounded-full bg-black/50 flex items-center justify-center backdrop-blur-sm"
-          >
+          <button onClick={() => navigate("/")} className="w-10 h-10 rounded-full bg-black/50 flex items-center justify-center backdrop-blur-sm">
             <ArrowLeft className="w-6 h-6 text-white" />
           </button>
           
@@ -57,10 +51,9 @@ const ProductDetail = () => {
           </div>
           
           <div className="w-full bg-white/20 rounded-full h-2">
-            <div 
-              className="h-2 rounded-full bg-gradient-to-r from-qoqa-pink to-pink-400"
-              style={{ width: "100%" }}
-            />
+            <div className="h-2 rounded-full bg-gradient-to-r from-qoqa-pink to-pink-400" style={{
+            width: "100%"
+          }} />
           </div>
         </div>
       </div>
@@ -222,19 +215,15 @@ const ProductDetail = () => {
         <div className="mt-8 mb-6">
           <div className="w-full h-px bg-white/30 mb-6"></div>
           
-          <h3 className="text-xl font-bold text-white mb-4">Délai de livraison : dans 3 mois</h3>
-          <p className="text-white/90 text-sm mb-6">
-            Disponible sous réserve de résiliation dans un délai standard de 3 mois. Parfait pour anticiper vos futurs projets !
-          </p>
+          <h3 className="text-xl font-bold text-white mb-4">Garantie Satisfait ou On Continue™</h3>
+          <p className="text-white/90 text-sm mb-6">Disponible immédiatement pour les missions urgentes, ou programmable selon votre agenda. La flexibilité temporelle, c'est dans l'ADN du produit.</p>
         </div>
 
         <div className="mt-8 mb-20">
           <div className="w-full h-px bg-white/30 mb-6"></div>
           
-          <h3 className="text-xl font-bold text-white mb-4">Garantie satisfaction No-Limit</h3>
-          <p className="text-white/90 text-sm">
-            Si vos visuels ne décrochent pas des "oh" et des "ah", on vous rembourse… en compliments.
-          </p>
+          <h3 className="text-xl font-bold text-white mb-4">Garantie Update System Pro</h3>
+          <p className="text-white/90 text-sm">Le Qreator tourne à 100% de ses capacités en permanence. Bug détecté ? Patch automatique déployé jusqu'à ce que tout soit parfait. Version finale garantie.</p>
         </div>
       </div>
 
@@ -243,8 +232,6 @@ const ProductDetail = () => {
       
       {/* Cart Dialog */}
       <CartDialog open={cartOpen} onOpenChange={setCartOpen} />
-    </div>
-  );
+    </div>;
 };
-
 export default ProductDetail;
