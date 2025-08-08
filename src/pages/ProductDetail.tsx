@@ -7,6 +7,7 @@ import ProgressBar from "@/components/ProgressBar";
 import QoqaButton from "@/components/QoqaButton";
 import CountdownTimer from "@/components/CountdownTimer";
 import CartDialog from "@/components/CartDialog";
+import { useToast } from "@/hooks/use-toast";
 const ProductDetail = () => {
   const {
     id
@@ -14,6 +15,29 @@ const ProductDetail = () => {
   const navigate = useNavigate();
   const [cartOpen, setCartOpen] = useState(false);
   const [isLiked, setIsLiked] = useState(false);
+  const { toast } = useToast();
+
+  const handleShare = async () => {
+    const shareData = {
+      title: "Qreator XS Ultra Max Pro Super Deluxe Edition™️",
+      text: "Découvrez le produit ultime pour sublimer vos projets visuels !",
+      url: window.location.href,
+    };
+
+    try {
+      if (navigator.share) {
+        await navigator.share(shareData);
+      } else {
+        await navigator.clipboard.writeText(window.location.href);
+        toast({
+          title: "Lien copié !",
+          description: "L'URL a été copiée dans votre presse-papiers",
+        });
+      }
+    } catch (error) {
+      console.error("Erreur lors du partage:", error);
+    }
+  };
 
   // For now, we only handle the Qreator product
   if (id !== "qreator") {
@@ -34,7 +58,7 @@ const ProductDetail = () => {
           
           <img src="/lovable-uploads/3b28a478-a367-4887-982d-5a7810e41404.png" alt="QOQA" className="h-10" />
           
-          <button className="w-10 h-10 rounded-full bg-black/50 flex items-center justify-center backdrop-blur-sm">
+          <button onClick={handleShare} className="w-10 h-10 rounded-full bg-black/50 flex items-center justify-center backdrop-blur-sm">
             <Share className="w-6 h-6 text-white" />
           </button>
         </div>
