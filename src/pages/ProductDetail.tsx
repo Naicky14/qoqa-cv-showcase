@@ -155,7 +155,7 @@ const ProductDetail = () => {
         
         <div className="text-white/90 leading-relaxed space-y-4">
           <p>
-            <strong>Attention, mesdames et messieurs :</strong> voici le Qreator, le produit ultime pour sublimer vos projets visuels. 
+            <strong>Attention, mesdames et messieurs:</strong> voici le Qreator, le produit ultime pour sublimer vos projets visuels. 
             Version XS Ultra Max Pro Super Deluxe Edition™️ incluse, parce que plus c'est long, plus c'est impressionnant. 
             Ce n'est pas juste un photographe-retoucheur, c'est une machine à émerveiller, un créateur d'émotions et un maître des pixels.
           </p>
@@ -165,7 +165,7 @@ const ProductDetail = () => {
           <div className="w-full h-px bg-white/30 mb-6"></div>
           
           <h3 className="text-xl font-bold text-white mb-6">
-            Pourquoi choisir le Qreator XS Ultra Max Pro Super Deluxe Edition™️ ?
+            Pourquoi choisir le Qreator XS Ultra Max Pro Super Deluxe Edition™️?
           </h3>
           
           <div className="space-y-4 text-white/90">
@@ -205,7 +205,7 @@ const ProductDetail = () => {
             <div>
               <h4 className="font-semibold text-white mb-2">6. Passion Unlimited Turbo Drive</h4>
               <p className="text-sm leading-relaxed">
-                Je peux photographier des montres, des couches-culottes et même des bouteilles. Petite note : une partie du liquide risque d'être prélevée… pour des raisons "techniques" bien sûr. Avec moi, vos projets auront toujours une touche de créativité décalée.
+                Je peux photographier des montres, des couches-culottes et même des bouteilles. Petite note: une partie du liquide risque d'être prélevée… pour des raisons "techniques" bien sûr. Avec moi, vos projets auront toujours une touche de créativité décalée.
               </p>
             </div>
           </div>
@@ -214,25 +214,25 @@ const ProductDetail = () => {
         <div className="mt-8 mb-6">
           <div className="w-full h-px bg-white/30 mb-6"></div>
           
-          <h3 className="text-xl font-bold text-white mb-4">Spécifications techniques :</h3>
+          <h3 className="text-xl font-bold text-white mb-4">Spécifications techniques:</h3>
           <div className="space-y-2 text-white/90 text-sm">
-            <p>• <strong>Photographie :</strong> Studio 10 ans, spécialisation montres, objets précieux, et œuvres d'art.</p>
-            <p>• <strong>Retouche :</strong> Adobe Suite (15 ans), Capture One, Pixel-Perfect Technology.</p>
-            <p>• <strong>Logiciels Pro Galaxy Bundle™ :</strong> Photoshop, InDesign, Illustrator, Premiere Pro, After Effects inclus.</p>
-            <p>• <strong>Veille Technologique Pro Max™ :</strong> Mise à jour permanente sur les dernières innovations IA, matériel photo/vidéo, logiciels émergents. Le Qreator reste toujours à la pointe de la tech.</p>
-            <p>• <strong>Mobilité :</strong> Permis de conduire, véhicule, transports publics, télétravail, grande flexibilité. En attente d'une mission sur la Lune avec SpaceX, mais toujours dispo pour vos projets terrestres.</p>
-            <p>• <strong>Compatibilité universelle :</strong> Luxe, publicité, digital, photographie culinaire, édition d'art, et reportage événementiel, ou un mix de tout ça.</p>
-            <p>• <strong>Extras :</strong> Organisation précise, créativité débordante, et un humour garanti sans supplément.</p>
+            <p>• <strong>Photographie:</strong> Studio 10 ans, spécialisation montres, objets précieux, et œuvres d'art.</p>
+            <p>• <strong>Retouche:</strong> Adobe Suite (15 ans), Capture One, Pixel-Perfect Technology.</p>
+            <p>• <strong>Logiciels Pro Galaxy Bundle™:</strong> Photoshop, InDesign, Illustrator, Premiere Pro, After Effects inclus.</p>
+            <p>• <strong>Veille Technologique Pro Max™:</strong> Mise à jour permanente sur les dernières innovations IA, matériel photo/vidéo, logiciels émergents. Le Qreator reste toujours à la pointe de la tech.</p>
+            <p>• <strong>Mobilité:</strong> Permis de conduire, véhicule, transports publics, télétravail, grande flexibilité. En attente d'une mission sur la Lune avec SpaceX, mais toujours dispo pour vos projets terrestres.</p>
+            <p>• <strong>Compatibilité universelle:</strong> Luxe, publicité, digital, photographie culinaire, édition d'art, et reportage événementiel, ou un mix de tout ça.</p>
+            <p>• <strong>Extras:</strong> Organisation précise, créativité débordante, et un humour garanti sans supplément.</p>
           </div>
         </div>
 
         <div className="mt-8 mb-6">
           <div className="w-full h-px bg-white/30 mb-6"></div>
           
-          <h3 className="text-xl font-bold text-white mb-4">Contenu du pack :</h3>
+          <h3 className="text-xl font-bold text-white mb-4">Contenu du pack:</h3>
           <div className="text-white/90 text-sm space-y-2">
             <p>• 1 Qreator XS Ultra Max Pro Super Deluxe Edition™️, livré prêt à l'emploi.</p>
-            <p>• <strong>Accessoires inclus :</strong> créativité, passion, curiosité insatiable, une résistance légendaire aux deadlines serrées, une adaptabilité hors norme et une vision artistique toujours en quête de perfection.</p>
+            <p>• <strong>Accessoires inclus:</strong> créativité, passion, curiosité insatiable, une résistance légendaire aux deadlines serrées, une adaptabilité hors norme et une vision artistique toujours en quête de perfection.</p>
           </div>
         </div>
 
@@ -247,7 +247,7 @@ const ProductDetail = () => {
           <div className="w-full h-px bg-white/30 mb-6"></div>
           
           <h3 className="text-xl font-bold text-white mb-4">Garantie Update System Pro</h3>
-          <p className="text-white/90 text-sm">Le Qreator tourne à 100% de ses capacités en permanence. Bug détecté ? Patch automatique déployé jusqu'à ce que tout soit parfait. Version finale garantie.</p>
+          <p className="text-white/90 text-sm">Le Qreator tourne à 100% de ses capacités en permanence. Bug détecté? Patch automatique déployé jusqu'à ce que tout soit parfait. Version finale garantie.</p>
         </div>
       </div>
 
