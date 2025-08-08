@@ -239,7 +239,7 @@ const ProductDetail = () => {
         <div className="mt-8 mb-6">
           <div className="w-full h-px bg-white/30 mb-6"></div>
           
-          <h3 className="text-xl font-bold text-white mb-4">Garantie Satisfait ou On Continue™</h3>
+          <h3 className="text-xl font-bold text-white mb-4">Livraison Instant ou Sur-Mesure™</h3>
           <p className="text-white/90 text-sm mb-6">Disponible immédiatement pour les missions urgentes, ou programmable selon votre agenda. La flexibilité temporelle, c'est dans l'ADN du produit.</p>
         </div>
 
