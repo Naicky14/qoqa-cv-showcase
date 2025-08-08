@@ -108,7 +108,7 @@ const ProductDetail = () => {
                 <span className="text-white/60 text-sm ml-2">il y a 45 minutes</span>
               </div>
             </div>
-            <p className="text-white">Rallonge olive 🫒 please 🥺</p>
+            <p className="text-white">Rallonge please 🥺</p>
           </CardContent>
         </Card>
         
@@ -117,14 +117,8 @@ const ProductDetail = () => {
           <span className="font-semibold">31 commentaires</span>
         </button>
         
-        <button 
-          onClick={() => setIsLiked(!isLiked)}
-          className="w-full bg-qoqa-dark-bg rounded-full py-4 mb-6 flex items-center justify-center gap-2 text-white"
-        >
-          <Heart 
-            className="w-5 h-5" 
-            fill={isLiked ? "white" : "none"} 
-          />
+        <button onClick={() => setIsLiked(!isLiked)} className="w-full bg-qoqa-dark-bg rounded-full py-4 mb-6 flex items-center justify-center gap-2 text-white">
+          <Heart className="w-5 h-5" fill={isLiked ? "white" : "none"} />
           <span className="font-semibold">{isLiked ? '9' : '8'} Likes</span>
         </button>
       </div>
