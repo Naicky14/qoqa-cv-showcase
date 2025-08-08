@@ -179,7 +179,7 @@ const ProductDetail = () => {
             <div>
               <h4 className="font-semibold text-white mb-2">2. Retouche Pro Ultra Pixel Perfect+</h4>
               <p className="text-sm leading-relaxed">
-                15 ans de maîtrise sur Adobe Suite, Capture One et d'autres logiciels qu'on ne cite même pas parce que la liste serait trop longue. Le résultat ? Vos images passent de "meh" à "WOWOWOW".
+                15 ans de maîtrise sur Adobe Suite, Capture One et d'autres logiciels qu'on ne cite même pas parce que la liste serait trop longue. Le résultat? Vos images passent de "meh" à "WOWOWOW".
               </p>
             </div>
             
