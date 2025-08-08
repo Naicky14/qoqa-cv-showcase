@@ -193,7 +193,7 @@ const ProductDetail = () => {
             <div>
               <h4 className="font-semibold text-white mb-2">4. Arrière-plans et vidéos Galaxy Infinite+</h4>
               <p className="text-sm leading-relaxed">
-                Il ne fait pas que cliquer sur un bouton : il imagine, il crée, et il livre des visuels qui vont faire pleurer vos concurrents.
+                Il ne fait pas que cliquer sur un bouton: il imagine, il crée, et il produit des visuels parfaitement alignés sur votre charte graphique et vos exigences les plus pointues.
               </p>
             </div>
             
