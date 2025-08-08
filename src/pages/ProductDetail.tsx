@@ -186,7 +186,7 @@ const ProductDetail = () => {
             <div>
               <h4 className="font-semibold text-white mb-2">3. Créateur Multi-Format Universalis 4.0</h4>
               <p className="text-sm leading-relaxed">
-                Publicité de luxe ? Campagne alimentaire ? Vidéo pour réseaux sociaux ? Le Qreator s'adapte à tout comme un caméléon high-tech.
+                Publicité de luxe? Campagne alimentaire? Vidéo pour réseaux sociaux? Le Qreator s'adapte à tout comme un caméléon high-tech.
               </p>
             </div>
             
