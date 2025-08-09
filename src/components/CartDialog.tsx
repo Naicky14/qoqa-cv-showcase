@@ -126,6 +126,14 @@ const CartDialog = ({
               <p className="font-semibold">Yannick Boissieux</p>
               <p>Rue Krafft 5</p>
               <p>1860 Aigle</p>
+              <a 
+                href="https://www.yannickboissieux.ch" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="font-bold underline text-white hover:text-white/80 transition-colors"
+              >
+                yannickboissieux.ch
+              </a>
             </div>
             
             <button className="w-full bg-gray-600 rounded-full py-3 text-white font-semibold">
