@@ -78,8 +78,12 @@ const CartDialog = ({
           <div className="bg-white/5 rounded-lg p-4 mb-6">
             <div className="flex gap-4">
               {/* Image produit */}
-              <div className="w-20 h-20 bg-gray-200 rounded-lg flex items-center justify-center">
-                <span className="text-2xl">📸</span>
+              <div className="w-20 h-20 rounded-lg overflow-hidden">
+                <img 
+                  src="/lovable-uploads/324776d0-fb94-4d85-8898-db6b9e43e36c.png" 
+                  alt="Qreator Portrait" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               
               {/* Info produit */}
