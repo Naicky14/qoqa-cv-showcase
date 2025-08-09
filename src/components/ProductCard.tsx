@@ -33,8 +33,12 @@ const ProductCard = ({
   return (
     <Link to={`/product/${id}`}>
       <Card className="overflow-hidden hover:scale-105 transition-transform bg-black border-white/20 rounded-2xl">
-        <div className={`h-48 relative ${bgColor} flex items-center justify-center`}>
-          <div className="text-6xl">{emoji}</div>
+        <div className="h-48 relative overflow-hidden">
+          <img 
+            src="/lovable-uploads/41a0554c-f258-4b05-9c17-aec38f4b476f.png" 
+            alt="Qreator Portrait" 
+            className="w-full h-full object-cover"
+          />
         </div>
         
         <CardContent className="p-6">
