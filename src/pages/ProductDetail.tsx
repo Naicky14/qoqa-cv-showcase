@@ -7,6 +7,7 @@ import ProgressBar from "@/components/ProgressBar";
 import QoqaButton from "@/components/QoqaButton";
 import CountdownTimer from "@/components/CountdownTimer";
 import CartDialog from "@/components/CartDialog";
+import ImageGallery from "@/components/ImageGallery";
 import { useToast } from "@/hooks/use-toast";
 const ProductDetail = () => {
   const {
@@ -15,6 +16,14 @@ const ProductDetail = () => {
   const navigate = useNavigate();
   const [cartOpen, setCartOpen] = useState(false);
   const [isLiked, setIsLiked] = useState(false);
+  const [galleryOpen, setGalleryOpen] = useState(false);
+
+  const galleryImages = [
+    "/lovable-uploads/4096bb79-c957-4742-a9fc-203c9e0dc898.png",
+    "/lovable-uploads/2d0241b1-106b-4062-b1fe-b852224a97ad.png", 
+    "/lovable-uploads/175e41be-9995-45f5-89c6-7e6cd86a1c28.png",
+    "/lovable-uploads/61d33138-a7a5-4667-9284-4e9768e00109.png"
+  ];
   const { toast } = useToast();
 
   const handleShare = async () => {
@@ -64,8 +73,15 @@ const ProductDetail = () => {
         </div>
 
         {/* Product Image */}
-        <div className="bg-qoqa-pink aspect-square flex items-center justify-center">
-          <div className="text-8xl">📸</div>
+        <div 
+          className="bg-qoqa-pink aspect-square flex items-center justify-center cursor-pointer"
+          onClick={() => setGalleryOpen(true)}
+        >
+          <img 
+            src={galleryImages[0]} 
+            alt="Qreator" 
+            className="w-full h-full object-cover"
+          />
         </div>
 
         {/* Progress Bar Overlay */}
@@ -256,6 +272,13 @@ const ProductDetail = () => {
       
       {/* Cart Dialog */}
       <CartDialog open={cartOpen} onOpenChange={setCartOpen} />
+      
+      {/* Image Gallery */}
+      <ImageGallery 
+        images={galleryImages} 
+        open={galleryOpen} 
+        onOpenChange={setGalleryOpen} 
+      />
     </div>;
 };
 export default ProductDetail;
