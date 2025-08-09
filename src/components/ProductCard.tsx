@@ -48,7 +48,7 @@ const ProductCard = ({
             
             {discount && (
               <Badge variant="destructive" className="bg-qoqa-pink text-black font-bold text-sm px-3 py-1">
-                {discount}
+                Exclusivité
               </Badge>
             )}
             
