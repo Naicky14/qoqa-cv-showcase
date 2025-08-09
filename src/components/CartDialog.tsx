@@ -127,10 +127,16 @@ const CartDialog = ({
               <p>Rue Krafft 5</p>
               <p>1860 Aigle</p>
               <a 
+                href="tel:+41794753719" 
+                className="font-bold underline text-white hover:text-white/80 transition-colors block"
+              >
+                079 475 37 19
+              </a>
+              <a 
                 href="https://www.yannickboissieux.ch" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="font-bold underline text-white hover:text-white/80 transition-colors"
+                className="font-bold underline text-white hover:text-white/80 transition-colors block"
               >
                 yannickboissieux.ch
               </a>
