@@ -19,7 +19,7 @@ const ProductDetail = () => {
   const [galleryOpen, setGalleryOpen] = useState(false);
 
   const galleryImages = [
-    "/lovable-uploads/4096bb79-c957-4742-a9fc-203c9e0dc898.png",
+    "/lovable-uploads/02abbbeb-0bd2-43a1-a8f3-d47f1233f0ad.png",
     "/lovable-uploads/2d0241b1-106b-4062-b1fe-b852224a97ad.png", 
     "/lovable-uploads/175e41be-9995-45f5-89c6-7e6cd86a1c28.png",
     "/lovable-uploads/61d33138-a7a5-4667-9284-4e9768e00109.png"
