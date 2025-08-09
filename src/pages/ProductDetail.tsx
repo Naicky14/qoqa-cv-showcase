@@ -188,7 +188,7 @@ const ProductDetail = () => {
             <div>
               <h4 className="font-semibold text-white mb-2">1. Photographe Studio HD 24K Gold Certified Premium</h4>
               <p className="text-sm leading-relaxed">
-                Avec 10 ans d'expérience en photographie studio, le Qreator capture tout: des montres qui brillent comme un diamant aux œuvres d'art plus fragiles que votre connexion wifi un lundi matin.
+                Avec 10 ans d'expérience en photographie studio, le Qreator capture tout: montres de luxe, sacs haute couture, parfums, bouteilles, mais aussi couches-culottes et ustensiles de cuisine. Du plus prestigieux au plus... pratique.
               </p>
             </div>
             
