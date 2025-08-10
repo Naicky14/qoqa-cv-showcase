@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { X } from "lucide-react";
@@ -52,11 +53,6 @@ const ImageGallery = ({ images, open, onOpenChange, initialIndex = 0 }: ImageGal
             <X className="w-5 h-5 text-white" />
           </button>
 
-          {/* Counter */}
-          <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-50 text-white text-lg font-medium">
-            {currentIndex + 1}/{images.length}
-          </div>
-
           {/* Carousel */}
           <div className="w-full h-full overflow-hidden" ref={emblaRef}>
             <div className="flex h-full">
@@ -72,20 +68,10 @@ const ImageGallery = ({ images, open, onOpenChange, initialIndex = 0 }: ImageGal
             </div>
           </div>
 
-          {/* Dots Indicator */}
-          {images.length > 1 && (
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
-              {images.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => emblaApi?.scrollTo(index)}
-                  className={`w-2 h-2 rounded-full transition-colors ${
-                    index === currentIndex ? "bg-white" : "bg-white/40"
-                  }`}
-                />
-              ))}
-            </div>
-          )}
+          {/* Counter moved to bottom */}
+          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-50 text-white text-lg font-medium">
+            {currentIndex + 1}/{images.length}
+          </div>
         </div>
       </DialogContent>
     </Dialog>
