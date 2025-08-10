@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
-import { ChevronLeft, ChevronRight, X } from "lucide-react";
+import { X } from "lucide-react";
+import useEmblaCarousel from "embla-carousel-react";
 
 interface ImageGalleryProps {
   images: string[];
@@ -11,18 +12,28 @@ interface ImageGalleryProps {
 
 const ImageGallery = ({ images, open, onOpenChange, initialIndex = 0 }: ImageGalleryProps) => {
   const [currentIndex, setCurrentIndex] = useState(initialIndex);
+  const [emblaRef, emblaApi] = useEmblaCarousel({ 
+    loop: true,
+    startIndex: initialIndex
+  });
 
-  const goToPrevious = () => {
-    setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
-  };
+  useEffect(() => {
+    if (!emblaApi) return;
 
-  const goToNext = () => {
-    setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-  };
+    emblaApi.on('select', () => {
+      setCurrentIndex(emblaApi.selectedScrollSnap());
+    });
+  }, [emblaApi]);
+
+  useEffect(() => {
+    if (emblaApi && open) {
+      emblaApi.scrollTo(initialIndex);
+    }
+  }, [emblaApi, open, initialIndex]);
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === "ArrowLeft") goToPrevious();
-    if (e.key === "ArrowRight") goToNext();
+    if (e.key === "ArrowLeft") emblaApi?.scrollPrev();
+    if (e.key === "ArrowRight") emblaApi?.scrollNext();
     if (e.key === "Escape") onOpenChange(false);
   };
 
@@ -46,32 +57,19 @@ const ImageGallery = ({ images, open, onOpenChange, initialIndex = 0 }: ImageGal
             {currentIndex + 1}/{images.length}
           </div>
 
-          {/* Navigation Arrows */}
-          {images.length > 1 && (
-            <>
-              <button
-                onClick={goToPrevious}
-                className="absolute left-4 z-50 w-12 h-12 rounded-full bg-gray-800/80 hover:bg-gray-700/80 flex items-center justify-center transition-colors"
-              >
-                <ChevronLeft className="w-6 h-6 text-white" />
-              </button>
-              
-              <button
-                onClick={goToNext}
-                className="absolute right-4 z-50 w-12 h-12 rounded-full bg-gray-800/80 hover:bg-gray-700/80 flex items-center justify-center transition-colors"
-              >
-                <ChevronRight className="w-6 h-6 text-white" />
-              </button>
-            </>
-          )}
-
-          {/* Main Image */}
-          <div className="w-full h-full flex items-center justify-center p-8">
-            <img
-              src={images[currentIndex]}
-              alt={`Image ${currentIndex + 1}`}
-              className="max-w-full max-h-full object-contain"
-            />
+          {/* Carousel */}
+          <div className="w-full h-full overflow-hidden" ref={emblaRef}>
+            <div className="flex h-full">
+              {images.map((image, index) => (
+                <div key={index} className="flex-none w-full h-full flex items-center justify-center p-8">
+                  <img
+                    src={image}
+                    alt={`Image ${index + 1}`}
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Dots Indicator */}
@@ -80,7 +78,7 @@ const ImageGallery = ({ images, open, onOpenChange, initialIndex = 0 }: ImageGal
               {images.map((_, index) => (
                 <button
                   key={index}
-                  onClick={() => setCurrentIndex(index)}
+                  onClick={() => emblaApi?.scrollTo(index)}
                   className={`w-2 h-2 rounded-full transition-colors ${
                     index === currentIndex ? "bg-white" : "bg-white/40"
                   }`}
