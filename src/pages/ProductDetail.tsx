@@ -1,4 +1,3 @@
-import { useParams, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -8,12 +7,9 @@ import QoqaButton from "@/components/QoqaButton";
 import CountdownTimer from "@/components/CountdownTimer";
 import CartDialog from "@/components/CartDialog";
 import ImageGallery from "@/components/ImageGallery";
-import { useToast } from "@/hooks/use-toast";
 const ProductDetail = () => {
-  const {
-    id
-  } = useParams();
-  const navigate = useNavigate();
+  // Since we know we're on /product/qreator route, we can hardcode the id for now
+  const id = "qreator";
   const [cartOpen, setCartOpen] = useState(false);
   const [isLiked, setIsLiked] = useState(false);
   const [galleryOpen, setGalleryOpen] = useState(false);
@@ -24,7 +20,6 @@ const ProductDetail = () => {
     "/lovable-uploads/175e41be-9995-45f5-89c6-7e6cd86a1c28.png",
     "/lovable-uploads/61d33138-a7a5-4667-9284-4e9768e00109.png"
   ];
-  const { toast } = useToast();
 
   const handleShare = async () => {
     const shareData = {
@@ -38,10 +33,7 @@ const ProductDetail = () => {
         await navigator.share(shareData);
       } else {
         await navigator.clipboard.writeText(window.location.href);
-        toast({
-          title: "Lien copié !",
-          description: "L'URL a été copiée dans votre presse-papiers",
-        });
+        alert("Lien copié dans le presse-papiers !");
       }
     } catch (error) {
       console.error("Erreur lors du partage:", error);
@@ -61,7 +53,7 @@ const ProductDetail = () => {
       {/* Header Navigation */}
       <div className="relative bg-black">
         <div className="flex items-center justify-between p-4 relative z-10">
-          <button onClick={() => navigate("/")} className="w-10 h-10 rounded-full bg-black/50 flex items-center justify-center backdrop-blur-sm">
+          <button onClick={() => window.location.href = "/"} className="w-10 h-10 rounded-full bg-black/50 flex items-center justify-center backdrop-blur-sm">
             <ArrowLeft className="w-6 h-6 text-white" />
           </button>
           
