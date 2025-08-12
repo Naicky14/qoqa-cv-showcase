@@ -32,7 +32,7 @@ const ProductCard = ({
 }: ProductCardProps) => {
   return (
     <Link to={`/product/${id}`}>
-      <Card className="overflow-hidden hover:scale-105 transition-transform bg-black border-white/80 border-2 rounded-2xl">
+      <Card className="overflow-hidden hover:scale-105 transition-transform bg-black border-white/20 rounded-2xl">
         <div className="h-48 relative overflow-hidden">
           <img 
             src="/lovable-uploads/41a0554c-f258-4b05-9c17-aec38f4b476f.png" 
